@@ -3,56 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ভিডিও অফার পেজ</title>
+    <title>অফার পেজ</title>
     <style>
         body {
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             background-color: #f0f2f5;
             font-family: Arial, sans-serif;
         }
 
-        /* ভিডিওর জন্য স্টাইল */
+        .text {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        /* ৩:৪ রেশিওর জন্য কন্টেইনার */
         .video-container {
             width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            aspect-ratio: 3 / 4;
+            max-width: 400px; /* মোবাইল স্ক্রিনের জন্য উপযুক্ত সাইজ */
+            aspect-ratio: 3 / 4; 
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             background-color: #000;
         }
 
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* ভিডিওটি ফ্রেমের সাথে অ্যাডজাস্ট করবে */
             cursor: pointer;
-        }
-
-        .instruction {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #333;
-            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <div class="instruction">
-        ভিডিওতে ক্লিক করে অ্যাপটি ডাউনলোড করুন
-    </div>
+    <div class="text">ভিডিওতে ক্লিক করে অ্যাপটি ডাউনলোড করুন</div>
 
     <div class="video-container">
         <a href="http://vip999.77viptaka.com/?referralCode=p">
             <video autoplay muted loop playsinline>
-                <source="123456.mp4" type="video/mp4">
+                <source src="123456.mp4" type="video/mp4">
                 আপনার ব্রাউজার ভিডিও সাপোর্ট করছে না।
             </video>
         </a>
