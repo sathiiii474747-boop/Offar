@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>অফার পেজ</title>
+    <title>মিউজিকসহ অফার পেজ</title>
     <style>
         body {
             margin: 0;
@@ -16,8 +16,8 @@
         }
 
         .text {
-            margin-bottom: 15px;
-            font-size: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
             font-weight: bold;
             color: #333;
             text-align: center;
@@ -25,35 +25,68 @@
 
         /* ৩:৪ রেশিওর জন্য কন্টেইনার */
         .video-container {
+            position: relative;
             width: 100%;
-            max-width: 400px; /* মোবাইল স্ক্রিনের জন্য উপযুক্ত সাইজ */
+            max-width: 380px; 
             aspect-ratio: 3 / 4; 
             overflow: hidden;
             border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             background-color: #000;
         }
 
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* ভিডিওটি ফ্রেমের সাথে অ্যাডজাস্ট করবে */
+            object-fit: cover;
             cursor: pointer;
+        }
+
+        /* সাউন্ড বাটন স্টাইল */
+        .mute-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 10;
         }
     </style>
 </head>
 <body>
 
-    <div class="text">ভিডিওতে ক্লিক করে অ্যাপটি ডাউনলোড করুন</div>
+    <div class="text">ভিডিওতে ক্লিক করে অফারটি দেখুন</div>
 
     <div class="video-container">
         <a href="http://vip999.77viptaka.com/?referralCode=p">
-            <video autoplay muted loop playsinline>
+            <video id="myVideo" autoplay loop playsinline>
                 <source src="123456.mp4" type="video/mp4">
                 আপনার ব্রাউজার ভিডিও সাপোর্ট করছে না।
             </video>
         </a>
+        <button class="mute-btn" onclick="toggleMute()">সাউন্ড অন/অফ</button>
     </div>
+
+    <script>
+        var video = document.getElementById("myVideo");
+        
+        // ব্রাউজার পলিসির কারণে প্রথমে মিউট করে রাখা ভালো যেন অটো-প্লে হয়
+        video.muted = true;
+
+        function toggleMute() {
+            if (video.muted) {
+                video.muted = false;
+                alert("সাউন্ড অন করা হয়েছে!");
+            } else {
+                video.muted = true;
+            }
+        }
+    </script>
 
 </body>
 </html>
