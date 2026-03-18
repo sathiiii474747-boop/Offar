@@ -1,42 +1,62 @@
 ‎<!DOCTYPE html>
-‎<html lang="bn">
-‎<head>
-‎    <meta charset="UTF-8">
-‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-‎    <title>Video Download Link</title>
-‎    <style>
-‎        /* ১৬:৯ অনুপাত ঠিক করার জন্য স্টাইল */
-‎        .video-container {
-‎            width: 100%;
-‎            max-width: 800px; /* আপনি চাইলে এটা কমাতে বা বাড়াতে পারেন */
-‎            margin: 0 auto;
-‎            aspect-ratio: 16 / 9; /* ভিডিওর সাইজ ১৬:৯ রাখবে */
-‎            overflow: hidden;
-‎            border-radius: 10px;
-‎            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-‎        }
-‎
-‎        video {
-‎            width: 100%;
-‎            height: 100%;
-‎            object-fit: cover; /* ভিডিওটি ফ্রেমের সাথে অ্যাডজাস্ট করবে */
-‎            cursor: pointer;
-‎        }
-‎    </style>
-‎</head>
-‎<body>
-‎
-‎    <h2 style="text-align:center;">ভিডিওতে ক্লিক করে অ্যাপটি ডাউনলোড করুন</h2>
-‎
-‎    <div class="video-container">
-‎        <a href="http://vip999.77viptaka.com/?referralCode=pqj9606" download>
-‎            <video autoplay muted loop playsinline title="ডাউনলোড করতে ক্লিক করুন">
-‎                <source src="uzzal.mp4" type="video/mp4">
-‎                আপনার ব্রাউজার ভিডিও সাপোর্ট করছে না।
-‎            </video>
-‎        </a>
-‎    </div>
-‎
-‎</body>
-‎</html>
-‎
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভিডিও অফার পেজ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ভিডিওর জন্য স্টাইল */
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background-color: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .instruction {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="instruction">
+        ভিডিওতে ক্লিক করে অ্যাপটি ডাউনলোড করুন
+    </div>
+
+    <div class="video-container">
+        <a href="http://vip999.77viptaka.com/?referralCode=p">
+            <video autoplay muted loop playsinline>
+                <source src="uzzal.mp4" type="video/mp4">
+                আপনার ব্রাউজার ভিডিও সাপোর্ট করছে না।
+            </video>
+        </a>
+    </div>
+
+</body>
+</html>
